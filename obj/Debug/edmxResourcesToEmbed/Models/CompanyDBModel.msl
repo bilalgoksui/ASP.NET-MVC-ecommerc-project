@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CompanyDBModelStoreContainer" CdmEntityContainer="CompanyDBEntities">
+    <EntitySetMapping Name="Companys">
+      <EntityTypeMapping TypeName="CompanyDBModel.Companys">
+        <MappingFragment StoreEntitySet="Companys">
+          <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="C_BusinessArea" ColumnName="C_BusinessArea" />
+          <ScalarProperty Name="C_CompanySize" ColumnName="C_CompanySize" />
+          <ScalarProperty Name="C_Country" ColumnName="C_Country" />
+          <ScalarProperty Name="C_City" ColumnName="C_City" />
+          <ScalarProperty Name="C_OS" ColumnName="C_OS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="CompanyDBModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+          <ScalarProperty Name="E_Name" ColumnName="E_Name" />
+          <ScalarProperty Name="E_Surname" ColumnName="E_Surname" />
+          <ScalarProperty Name="E_Position" ColumnName="E_Position" />
+          <ScalarProperty Name="E_Password" ColumnName="E_Password" />
+          <ScalarProperty Name="E_Email" ColumnName="E_Email" />
+          <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="CompanyDBModel.Logs">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="L_ID" ColumnName="L_ID" />
+          <ScalarProperty Name="L_Proto" ColumnName="L_Proto" />
+          <ScalarProperty Name="L_Local_Address" ColumnName="L_Local_Address" />
+          <ScalarProperty Name="L_Foreign_Address" ColumnName="L_Foreign_Address" />
+          <ScalarProperty Name="L_State" ColumnName="L_State" />
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

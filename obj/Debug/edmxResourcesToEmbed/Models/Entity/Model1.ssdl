@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DenemeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CollectionTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="CollectionTablesub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="CommandandControl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="CommandandControlsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="CredentialAccess">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="CredentialAccesssub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="DefenseEvasion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="DefenseEvasionsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="Discovery">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Discoverysub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="Execution">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Executionsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="Exfiltration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Exfiltrationsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="Impact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Impactsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="InitialAccess">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="InitialAccesssub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="LateralMovement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="LateralMovementsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="Persistence">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Persistencesub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="PrivilegeEscalation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="PrivilegeEscalationsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="Reconnaissance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Reconnaissancesub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <EntityType Name="ResourceDevelopment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teknik" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="ResourceDevelopmentsub">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subteknik" Type="varchar" MaxLength="80" />
+    <Property Name="rid" Type="int" />
+  </EntityType>
+  <Association Name="FK__CollectionT__rid__5812160E">
+    <End Role="CollectionTable" Type="Self.CollectionTable" Multiplicity="0..1" />
+    <End Role="CollectionTablesub" Type="Self.CollectionTablesub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CollectionTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CollectionTablesub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CommandandC__rid__59063A47">
+    <End Role="CommandandControl" Type="Self.CommandandControl" Multiplicity="0..1" />
+    <End Role="CommandandControlsub" Type="Self.CommandandControlsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommandandControl">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CommandandControlsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CredentialA__rid__59FA5E80">
+    <End Role="CredentialAccess" Type="Self.CredentialAccess" Multiplicity="0..1" />
+    <End Role="CredentialAccesssub" Type="Self.CredentialAccesssub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CredentialAccess">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CredentialAccesssub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DefenseEvas__rid__5AEE82B9">
+    <End Role="DefenseEvasion" Type="Self.DefenseEvasion" Multiplicity="0..1" />
+    <End Role="DefenseEvasionsub" Type="Self.DefenseEvasionsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DefenseEvasion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DefenseEvasionsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Discoverysu__rid__5BE2A6F2">
+    <End Role="Discovery" Type="Self.Discovery" Multiplicity="0..1" />
+    <End Role="Discoverysub" Type="Self.Discoverysub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discovery">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Discoverysub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Executionsu__rid__5CD6CB2B">
+    <End Role="Execution" Type="Self.Execution" Multiplicity="0..1" />
+    <End Role="Executionsub" Type="Self.Executionsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Execution">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Executionsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Exfiltratio__rid__5DCAEF64">
+    <End Role="Exfiltration" Type="Self.Exfiltration" Multiplicity="0..1" />
+    <End Role="Exfiltrationsub" Type="Self.Exfiltrationsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exfiltration">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Exfiltrationsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Impactsub__rid__5EBF139D">
+    <End Role="Impact" Type="Self.Impact" Multiplicity="0..1" />
+    <End Role="Impactsub" Type="Self.Impactsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impact">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Impactsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InitialAcce__rid__5FB337D6">
+    <End Role="InitialAccess" Type="Self.InitialAccess" Multiplicity="0..1" />
+    <End Role="InitialAccesssub" Type="Self.InitialAccesssub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InitialAccess">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="InitialAccesssub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LateralMove__rid__60A75C0F">
+    <End Role="LateralMovement" Type="Self.LateralMovement" Multiplicity="0..1" />
+    <End Role="LateralMovementsub" Type="Self.LateralMovementsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LateralMovement">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LateralMovementsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persistence__rid__619B8048">
+    <End Role="Persistence" Type="Self.Persistence" Multiplicity="0..1" />
+    <End Role="Persistencesub" Type="Self.Persistencesub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persistence">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Persistencesub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PrivilegeEs__rid__628FA481">
+    <End Role="PrivilegeEscalation" Type="Self.PrivilegeEscalation" Multiplicity="0..1" />
+    <End Role="PrivilegeEscalationsub" Type="Self.PrivilegeEscalationsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrivilegeEscalation">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PrivilegeEscalationsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reconnaissa__rid__6383C8BA">
+    <End Role="Reconnaissance" Type="Self.Reconnaissance" Multiplicity="0..1" />
+    <End Role="Reconnaissancesub" Type="Self.Reconnaissancesub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reconnaissance">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reconnaissancesub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ResourceDev__rid__6477ECF3">
+    <End Role="ResourceDevelopment" Type="Self.ResourceDevelopment" Multiplicity="0..1" />
+    <End Role="ResourceDevelopmentsub" Type="Self.ResourceDevelopmentsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResourceDevelopment">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ResourceDevelopmentsub">
+        <PropertyRef Name="rid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DenemeDBModelStoreContainer">
+    <EntitySet Name="CollectionTable" EntityType="Self.CollectionTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CollectionTablesub" EntityType="Self.CollectionTablesub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommandandControl" EntityType="Self.CommandandControl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommandandControlsub" EntityType="Self.CommandandControlsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CredentialAccess" EntityType="Self.CredentialAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CredentialAccesssub" EntityType="Self.CredentialAccesssub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefenseEvasion" EntityType="Self.DefenseEvasion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefenseEvasionsub" EntityType="Self.DefenseEvasionsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Discovery" EntityType="Self.Discovery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Discoverysub" EntityType="Self.Discoverysub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Execution" EntityType="Self.Execution" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Executionsub" EntityType="Self.Executionsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exfiltration" EntityType="Self.Exfiltration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exfiltrationsub" EntityType="Self.Exfiltrationsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Impact" EntityType="Self.Impact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Impactsub" EntityType="Self.Impactsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InitialAccess" EntityType="Self.InitialAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InitialAccesssub" EntityType="Self.InitialAccesssub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LateralMovement" EntityType="Self.LateralMovement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LateralMovementsub" EntityType="Self.LateralMovementsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persistence" EntityType="Self.Persistence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persistencesub" EntityType="Self.Persistencesub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrivilegeEscalation" EntityType="Self.PrivilegeEscalation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrivilegeEscalationsub" EntityType="Self.PrivilegeEscalationsub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reconnaissance" EntityType="Self.Reconnaissance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reconnaissancesub" EntityType="Self.Reconnaissancesub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResourceDevelopment" EntityType="Self.ResourceDevelopment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResourceDevelopmentsub" EntityType="Self.ResourceDevelopmentsub" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CollectionT__rid__5812160E" Association="Self.FK__CollectionT__rid__5812160E">
+      <End Role="CollectionTable" EntitySet="CollectionTable" />
+      <End Role="CollectionTablesub" EntitySet="CollectionTablesub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CommandandC__rid__59063A47" Association="Self.FK__CommandandC__rid__59063A47">
+      <End Role="CommandandControl" EntitySet="CommandandControl" />
+      <End Role="CommandandControlsub" EntitySet="CommandandControlsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CredentialA__rid__59FA5E80" Association="Self.FK__CredentialA__rid__59FA5E80">
+      <End Role="CredentialAccess" EntitySet="CredentialAccess" />
+      <End Role="CredentialAccesssub" EntitySet="CredentialAccesssub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DefenseEvas__rid__5AEE82B9" Association="Self.FK__DefenseEvas__rid__5AEE82B9">
+      <End Role="DefenseEvasion" EntitySet="DefenseEvasion" />
+      <End Role="DefenseEvasionsub" EntitySet="DefenseEvasionsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Discoverysu__rid__5BE2A6F2" Association="Self.FK__Discoverysu__rid__5BE2A6F2">
+      <End Role="Discovery" EntitySet="Discovery" />
+      <End Role="Discoverysub" EntitySet="Discoverysub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Executionsu__rid__5CD6CB2B" Association="Self.FK__Executionsu__rid__5CD6CB2B">
+      <End Role="Execution" EntitySet="Execution" />
+      <End Role="Executionsub" EntitySet="Executionsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Exfiltratio__rid__5DCAEF64" Association="Self.FK__Exfiltratio__rid__5DCAEF64">
+      <End Role="Exfiltration" EntitySet="Exfiltration" />
+      <End Role="Exfiltrationsub" EntitySet="Exfiltrationsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Impactsub__rid__5EBF139D" Association="Self.FK__Impactsub__rid__5EBF139D">
+      <End Role="Impact" EntitySet="Impact" />
+      <End Role="Impactsub" EntitySet="Impactsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InitialAcce__rid__5FB337D6" Association="Self.FK__InitialAcce__rid__5FB337D6">
+      <End Role="InitialAccess" EntitySet="InitialAccess" />
+      <End Role="InitialAccesssub" EntitySet="InitialAccesssub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LateralMove__rid__60A75C0F" Association="Self.FK__LateralMove__rid__60A75C0F">
+      <End Role="LateralMovement" EntitySet="LateralMovement" />
+      <End Role="LateralMovementsub" EntitySet="LateralMovementsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persistence__rid__619B8048" Association="Self.FK__Persistence__rid__619B8048">
+      <End Role="Persistence" EntitySet="Persistence" />
+      <End Role="Persistencesub" EntitySet="Persistencesub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PrivilegeEs__rid__628FA481" Association="Self.FK__PrivilegeEs__rid__628FA481">
+      <End Role="PrivilegeEscalation" EntitySet="PrivilegeEscalation" />
+      <End Role="PrivilegeEscalationsub" EntitySet="PrivilegeEscalationsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reconnaissa__rid__6383C8BA" Association="Self.FK__Reconnaissa__rid__6383C8BA">
+      <End Role="Reconnaissance" EntitySet="Reconnaissance" />
+      <End Role="Reconnaissancesub" EntitySet="Reconnaissancesub" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ResourceDev__rid__6477ECF3" Association="Self.FK__ResourceDev__rid__6477ECF3">
+      <End Role="ResourceDevelopment" EntitySet="ResourceDevelopment" />
+      <End Role="ResourceDevelopmentsub" EntitySet="ResourceDevelopmentsub" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

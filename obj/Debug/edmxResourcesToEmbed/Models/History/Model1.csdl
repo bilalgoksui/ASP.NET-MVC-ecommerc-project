@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Companys">
+    <Key>
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="C_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C_BusinessArea" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C_CompanySize" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C_Country" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C_City" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C_OS" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FKEmployeesC_ID6477ECF3" FromRole="Companys" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="E_ID" />
+    </Key>
+    <Property Name="E_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="E_Surname" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="E_Position" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="E_Password" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="E_Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="C_ID" Type="Int32" />
+    <NavigationProperty Name="Companys" Relationship="Self.FKEmployeesC_ID6477ECF3" FromRole="Employees" ToRole="Companys" />
+    <NavigationProperty Name="Logs" Relationship="Self.FK_Logs_Employees" FromRole="Employees" ToRole="Logs" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="L_ID" />
+    </Key>
+    <Property Name="L_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="L_Proto" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="L_Local_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="L_Foreign_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="L_State" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="E_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Logs_Employees" FromRole="Logs" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FKEmployeesC_ID6477ECF3">
+    <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companys">
+        <PropertyRef Name="C_ID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="C_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Logs_Employees">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="E_ID" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="E_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CompanyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companys" EntityType="Self.Companys" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" />
+    <AssociationSet Name="FKEmployeesC_ID6477ECF3" Association="Self.FKEmployeesC_ID6477ECF3">
+      <End Role="Companys" EntitySet="Companys" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Logs_Employees" Association="Self.FK_Logs_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

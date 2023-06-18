@@ -1,0 +1,106 @@
+﻿.ca-menu {
+    padding: 0;
+    margin: 20px auto;
+    width: 1020px;
+    font-family: 'Dosis', sans-serif;
+    z-index: 102;
+    position: relative;
+}
+
+    .ca-menu li {
+        width: 230px;
+        height: 230px;
+        border: 5px solid #fff;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        background: #000;
+        margin-left: 403px;
+        margin-right: 4px;
+        margin-top: 95px;
+        -webkit-box-shadow: -1px -6px 9px 4px #000000;
+        -moz-box-shadow: -1px -6px 9px 4px #000000;
+        box-shadow: -1px -6px 9px 4px #000000;
+        -webkit-border-radius: 125px;
+        -moz-border-radius: 125px;
+        border-radius: 125px;
+        -webkit-transition: all 400ms linear;
+        -moz-transition: all 400ms linear;
+        -o-transition: all 400ms linear;
+        -ms-transition: all 400ms linear;
+        transition: all 400ms linear;
+    }
+
+        .ca-menu li:last-child {
+            margin-right: 0px;
+            margin: 0 auto 0 376px;
+        }
+
+        .ca-menu li a {
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: #fff;
+            position: relative;
+            -moz-box-shadow: 0px 0px 3px #000000;
+            -webkit-box-shadow: 0px 0px 3px #000000;
+            box-shadow: 0px 0px 3px #000000;
+        }
+
+.ca-main {
+    font-family: 'Courgette',cursive;
+    font-size: 34px;
+    height: 80px;
+    left: 50%;
+    margin-left: -78px;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    top: 80px;
+    transform: rotate(-27deg);
+    width: 170px;
+    margin-top: 11px;
+}
+
+.ca-sub {
+    text-align: center;
+    color: #fff;
+    font-size: 34px;
+    position: absolute;
+    height: 80px;
+    width: 170px;
+    left: 50%;
+    margin-left: -85px;
+    top: 60px;
+    opacity: 0;
+    margin-top: 12px;
+    font-family: 'Courgette', cursive;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    -ms-transition: all 400ms linear;
+    transition: all 400ms linear;
+    - transform: rotate(-27deg); /* IE 9 */
+    transform: rotate(-27deg); /* Chrome, Safari, Opera */
+    transform: rotate(-27deg); /* Standard syntax */
+}
+
+.ca-menu li:hover {
+    background: #000;
+    border-color: #fff;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 45px 50px -50px #fff;
+}
+
+    .ca-menu li:hover .ca-main {
+        display: none;
+    }
+
+    .ca-menu li:hover .ca-sub {
+        opacity: 1;
+    }

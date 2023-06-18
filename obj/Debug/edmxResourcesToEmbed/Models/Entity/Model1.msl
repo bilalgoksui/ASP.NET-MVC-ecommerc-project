@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DenemeDBModelStoreContainer" CdmEntityContainer="DenemeDBEntities">
+    <EntitySetMapping Name="CollectionTable">
+      <EntityTypeMapping TypeName="DenemeDBModel.CollectionTable">
+        <MappingFragment StoreEntitySet="CollectionTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CollectionTablesub">
+      <EntityTypeMapping TypeName="DenemeDBModel.CollectionTablesub">
+        <MappingFragment StoreEntitySet="CollectionTablesub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommandandControl">
+      <EntityTypeMapping TypeName="DenemeDBModel.CommandandControl">
+        <MappingFragment StoreEntitySet="CommandandControl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommandandControlsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.CommandandControlsub">
+        <MappingFragment StoreEntitySet="CommandandControlsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CredentialAccess">
+      <EntityTypeMapping TypeName="DenemeDBModel.CredentialAccess">
+        <MappingFragment StoreEntitySet="CredentialAccess">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CredentialAccesssub">
+      <EntityTypeMapping TypeName="DenemeDBModel.CredentialAccesssub">
+        <MappingFragment StoreEntitySet="CredentialAccesssub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefenseEvasion">
+      <EntityTypeMapping TypeName="DenemeDBModel.DefenseEvasion">
+        <MappingFragment StoreEntitySet="DefenseEvasion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefenseEvasionsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.DefenseEvasionsub">
+        <MappingFragment StoreEntitySet="DefenseEvasionsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discovery">
+      <EntityTypeMapping TypeName="DenemeDBModel.Discovery">
+        <MappingFragment StoreEntitySet="Discovery">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discoverysub">
+      <EntityTypeMapping TypeName="DenemeDBModel.Discoverysub">
+        <MappingFragment StoreEntitySet="Discoverysub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Execution">
+      <EntityTypeMapping TypeName="DenemeDBModel.Execution">
+        <MappingFragment StoreEntitySet="Execution">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Executionsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.Executionsub">
+        <MappingFragment StoreEntitySet="Executionsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exfiltration">
+      <EntityTypeMapping TypeName="DenemeDBModel.Exfiltration">
+        <MappingFragment StoreEntitySet="Exfiltration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exfiltrationsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.Exfiltrationsub">
+        <MappingFragment StoreEntitySet="Exfiltrationsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Impact">
+      <EntityTypeMapping TypeName="DenemeDBModel.Impact">
+        <MappingFragment StoreEntitySet="Impact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Impactsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.Impactsub">
+        <MappingFragment StoreEntitySet="Impactsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InitialAccess">
+      <EntityTypeMapping TypeName="DenemeDBModel.InitialAccess">
+        <MappingFragment StoreEntitySet="InitialAccess">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InitialAccesssub">
+      <EntityTypeMapping TypeName="DenemeDBModel.InitialAccesssub">
+        <MappingFragment StoreEntitySet="InitialAccesssub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LateralMovement">
+      <EntityTypeMapping TypeName="DenemeDBModel.LateralMovement">
+        <MappingFragment StoreEntitySet="LateralMovement">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LateralMovementsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.LateralMovementsub">
+        <MappingFragment StoreEntitySet="LateralMovementsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persistence">
+      <EntityTypeMapping TypeName="DenemeDBModel.Persistence">
+        <MappingFragment StoreEntitySet="Persistence">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persistencesub">
+      <EntityTypeMapping TypeName="DenemeDBModel.Persistencesub">
+        <MappingFragment StoreEntitySet="Persistencesub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrivilegeEscalation">
+      <EntityTypeMapping TypeName="DenemeDBModel.PrivilegeEscalation">
+        <MappingFragment StoreEntitySet="PrivilegeEscalation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrivilegeEscalationsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.PrivilegeEscalationsub">
+        <MappingFragment StoreEntitySet="PrivilegeEscalationsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reconnaissance">
+      <EntityTypeMapping TypeName="DenemeDBModel.Reconnaissance">
+        <MappingFragment StoreEntitySet="Reconnaissance">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reconnaissancesub">
+      <EntityTypeMapping TypeName="DenemeDBModel.Reconnaissancesub">
+        <MappingFragment StoreEntitySet="Reconnaissancesub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResourceDevelopment">
+      <EntityTypeMapping TypeName="DenemeDBModel.ResourceDevelopment">
+        <MappingFragment StoreEntitySet="ResourceDevelopment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="teknik" ColumnName="teknik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResourceDevelopmentsub">
+      <EntityTypeMapping TypeName="DenemeDBModel.ResourceDevelopmentsub">
+        <MappingFragment StoreEntitySet="ResourceDevelopmentsub">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subteknik" ColumnName="subteknik" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

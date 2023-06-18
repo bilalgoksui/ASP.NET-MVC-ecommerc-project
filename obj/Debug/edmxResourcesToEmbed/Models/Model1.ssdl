@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Companys">
+    <Key>
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="C_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="C_Name" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="C_BusinessArea" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="C_CompanySize" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="C_Country" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="C_City" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="C_OS" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="C_Password" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="E_ID" />
+    </Key>
+    <Property Name="E_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E_Name" Type="varchar" MaxLength="80" />
+    <Property Name="E_Surname" Type="varchar" MaxLength="80" />
+    <Property Name="E_Position" Type="varchar" MaxLength="80" />
+    <Property Name="E_Password" Type="varchar" MaxLength="80" />
+    <Property Name="E_Email" Type="varchar" MaxLength="80" />
+    <Property Name="C_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="L_ID" />
+    </Key>
+    <Property Name="L_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="L_Proto" Type="varchar" MaxLength="80" />
+    <Property Name="L_Local_Address" Type="varchar" MaxLength="80" />
+    <Property Name="L_Foreign_Address" Type="varchar" MaxLength="80" />
+    <Property Name="L_State" Type="varchar" MaxLength="80" />
+    <Property Name="L_Pid" Type="varchar" MaxLength="80" />
+    <Property Name="E_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Logss">
+    <Key>
+      <PropertyRef Name="L_ID" />
+    </Key>
+    <Property Name="L_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="L_Proto" Type="varchar" MaxLength="80" />
+    <Property Name="L_Local_Address" Type="varchar" MaxLength="80" />
+    <Property Name="L_Foreign_Address" Type="varchar" MaxLength="80" />
+    <Property Name="L_State" Type="varchar" MaxLength="80" />
+    <Property Name="L_Pid" Type="varchar" MaxLength="80" />
+    <Property Name="C_ID" Type="int" />
+  </EntityType>
+  <Association Name="FK__Employees__C_ID__6477ECF3">
+    <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companys">
+        <PropertyRef Name="C_ID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="C_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Logs__E_ID__0B91BA14">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="E_ID" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="E_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Logss__C_ID__160F4887">
+    <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+    <End Role="Logss" Type="Self.Logss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companys">
+        <PropertyRef Name="C_ID" />
+      </Principal>
+      <Dependent Role="Logss">
+        <PropertyRef Name="C_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CompanyModelStoreContainer">
+    <EntitySet Name="Companys" EntityType="Self.Companys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logss" EntityType="Self.Logss" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Employees__C_ID__6477ECF3" Association="Self.FK__Employees__C_ID__6477ECF3">
+      <End Role="Companys" EntitySet="Companys" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Logs__E_ID__0B91BA14" Association="Self.FK__Logs__E_ID__0B91BA14">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Logss__C_ID__160F4887" Association="Self.FK__Logss__C_ID__160F4887">
+      <End Role="Companys" EntitySet="Companys" />
+      <End Role="Logss" EntitySet="Logss" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

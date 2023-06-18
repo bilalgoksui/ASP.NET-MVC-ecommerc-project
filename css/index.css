@@ -1,0 +1,162 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.hero-contain{
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background: lightgray;
+  overflow: hidden;
+}
+.circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: gray;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.circle:before{
+  content: '';
+  height: 100px;
+  width: 100px;
+  background: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0;
+  animation: ribble 2s infinite;
+}
+.circle-text{
+  display: block;
+  margin-top: 44px;
+  font-family: arial;
+}
+
+.hr-style{
+      display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    border: 0;
+    height: 1px;
+  z-index: 0;
+  transform: translate(-50%, -50%) rotate(135deg);
+   transition: all 0.2s;
+  transform-origin: center center;
+    background-image: -webkit-linear-gradient(left, #d3d3d3, #8c8b8b, #d3d3d3);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+/* .hero-contain:hover .hr-style{
+  animation: rotate 2s ease infinite;
+} */
+.hr-rotate{
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.text-1-tleft{
+  font-size: 30px;
+  font-weight: 600;
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  opacity: 1;
+  color: gray;
+  text-transform: uppercase;
+  font-family: arial;
+  transition: all .3s;
+
+}
+.t1thide{
+  opacity: 0;
+  left: -5%;
+}
+.text-1-bright{
+  font-size: 30px;
+  font-weight: 600;
+  width: 200px;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  text-transform: uppercase;
+  font-family: arial;
+  transition: all .3s;
+  color: gray;
+}
+.t1bhide{
+  opacity: 0;
+  right: -5%;
+}
+.text-2-tright{
+  font-size: 30px;
+  font-weight: 600;
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  opacity: 0;
+  text-transform: uppercase;
+  font-family: arial;
+  transition: all .3s;
+  color: gray;
+}
+.t2tshow{
+  opacity: 1;
+  right: 10%;
+}
+.text-2-bleft{
+  font-size: 30px;
+  font-weight: 600;
+  width: 200px;
+  position: absolute;
+  bottom: 10%;
+  left: -5%;
+  opacity: 0;
+  text-transform: uppercase;
+  font-family: arial;
+  transition: all .3s;
+  color: gray;
+}
+.t2bshow{
+  opacity: 1;
+  left: 10%;
+
+}
+.syedshihab{
+  text-decoration: none;
+  display: block;
+  float: right;
+  font-size: 30px;
+  margin: 8px;
+  color: blueviolet;
+  position: relative;
+}
+
+
+  @keyframes ribble{
+  0%{
+    transform: scale(1);
+    opacity:1;
+  }
+  100%{
+    transform: scale(1.5);
+    opacity:0;
+  }
+
+}

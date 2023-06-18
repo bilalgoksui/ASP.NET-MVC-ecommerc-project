@@ -1,0 +1,91 @@
+﻿@model List<FinalProject.Models.Logss>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+
+<div class="hero-contain">
+    <div class="text-1-tleft">What you dream</div>
+    <div class="text-1-bright">We make it</div>
+    <div class="text-2-tright">Your satisfaction</div>
+    <div class="text-2-bleft">is our target</div>
+
+
+    <div class="circle">
+        <span class="circle-text">BOShield</span>
+
+    </div>
+    <hr class="hr-style">
+
+</div>
+@foreach (var urun in Model)
+{
+    <div>@urun.L_Proto</div>
+}
+
+<button id="downloadButton">Download</button>
+
+<!-- TEST PAGE -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Protocol</th>
+        <th>Local Address</th>
+        <th>Foreign Address</th>
+        <th>State</th>
+        <th>Company ID</th>
+    </tr>
+    @foreach (var records in Model.Take(6))
+    {
+        <tr>
+            <td>@records.L_ID</td>
+            <td>@records.L_Proto</td>
+            <td>@records.L_Local_Address</td>
+            <td>@records.L_Foreign_Address</td>
+            <td>@records.L_State</td>
+            <td>@records.C_ID</td>
+        </tr>
+    }
+</table>
+
+<!-- HISTORY PAGE -->
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Protocol</th>
+        <th>Local Address</th>
+        <th>Foreign Address</th>
+        <th>State</th>
+        <th>Company ID</th>
+    </tr>
+    @foreach (var records in Model)
+    {
+        <tr>
+            <td>@records.L_ID</td>
+            <td>@records.L_Proto</td>
+            <td>@records.L_Local_Address</td>
+            <td>@records.L_Foreign_Address</td>
+            <td>@records.L_State</td>
+            <td>@records.C_ID</td>
+        </tr>
+    }
+</table>
+
+<!-- File Upload -->
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload">
+</form>
+
+@if (ViewBag.IsUploadSuccessful != null && ViewBag.IsUploadSuccessful == true)
+{
+    <div>@ViewBag.UploadMessage</div>
+}
+else if (ViewBag.IsUploadSuccessful != null && ViewBag.IsUploadSuccessful == false)
+{
+    <div>@ViewBag.UploadMessage</div>
+}
+

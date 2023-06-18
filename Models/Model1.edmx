@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Companys">
+          <Key>
+            <PropertyRef Name="C_ID" />
+          </Key>
+          <Property Name="C_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="C_Name" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="C_BusinessArea" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="C_CompanySize" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="C_Country" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="C_City" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="C_OS" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="C_Password" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="E_ID" />
+          </Key>
+          <Property Name="E_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="E_Name" Type="varchar" MaxLength="80" />
+          <Property Name="E_Surname" Type="varchar" MaxLength="80" />
+          <Property Name="E_Position" Type="varchar" MaxLength="80" />
+          <Property Name="E_Password" Type="varchar" MaxLength="80" />
+          <Property Name="E_Email" Type="varchar" MaxLength="80" />
+          <Property Name="C_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="L_ID" />
+          </Key>
+          <Property Name="L_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="L_Proto" Type="varchar" MaxLength="80" />
+          <Property Name="L_Local_Address" Type="varchar" MaxLength="80" />
+          <Property Name="L_Foreign_Address" Type="varchar" MaxLength="80" />
+          <Property Name="L_State" Type="varchar" MaxLength="80" />
+          <Property Name="L_Pid" Type="varchar" MaxLength="80" />
+          <Property Name="E_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Logss">
+          <Key>
+            <PropertyRef Name="L_ID" />
+          </Key>
+          <Property Name="L_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="L_Proto" Type="varchar" MaxLength="80" />
+          <Property Name="L_Local_Address" Type="varchar" MaxLength="80" />
+          <Property Name="L_Foreign_Address" Type="varchar" MaxLength="80" />
+          <Property Name="L_State" Type="varchar" MaxLength="80" />
+          <Property Name="L_Pid" Type="varchar" MaxLength="80" />
+          <Property Name="C_ID" Type="int" />
+        </EntityType>
+        <Association Name="FK__Employees__C_ID__6477ECF3">
+          <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companys">
+              <PropertyRef Name="C_ID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="C_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Logs__E_ID__0B91BA14">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Logs">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Logss__C_ID__160F4887">
+          <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+          <End Role="Logss" Type="Self.Logss" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companys">
+              <PropertyRef Name="C_ID" />
+            </Principal>
+            <Dependent Role="Logss">
+              <PropertyRef Name="C_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CompanyModelStoreContainer">
+          <EntitySet Name="Companys" EntityType="Self.Companys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logss" EntityType="Self.Logss" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Employees__C_ID__6477ECF3" Association="Self.FK__Employees__C_ID__6477ECF3">
+            <End Role="Companys" EntitySet="Companys" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Logs__E_ID__0B91BA14" Association="Self.FK__Logs__E_ID__0B91BA14">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Logs" EntitySet="Logs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Logss__C_ID__160F4887" Association="Self.FK__Logss__C_ID__160F4887">
+            <End Role="Companys" EntitySet="Companys" />
+            <End Role="Logss" EntitySet="Logss" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Companys">
+          <Key>
+            <PropertyRef Name="C_ID" />
+          </Key>
+          <Property Name="C_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_BusinessArea" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_CompanySize" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_Country" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_City" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_OS" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_Password" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Employees__C_ID__6477ECF3" FromRole="Companys" ToRole="Employees" />
+          <NavigationProperty Name="Logss" Relationship="Self.FK__Logss__C_ID__160F4887" FromRole="Companys" ToRole="Logss" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="E_ID" />
+          </Key>
+          <Property Name="E_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="E_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="E_Surname" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="E_Position" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="E_Password" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="E_Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="C_ID" Type="Int32" />
+          <NavigationProperty Name="Companys" Relationship="Self.FK__Employees__C_ID__6477ECF3" FromRole="Employees" ToRole="Companys" />
+          <NavigationProperty Name="Logs" Relationship="Self.FK__Logs__E_ID__0B91BA14" FromRole="Employees" ToRole="Logs" />
+        </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="L_ID" />
+          </Key>
+          <Property Name="L_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="L_Proto" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_Local_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_Foreign_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_State" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_Pid" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="E_ID" Type="Int32" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Logs__E_ID__0B91BA14" FromRole="Logs" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="Logss">
+          <Key>
+            <PropertyRef Name="L_ID" />
+          </Key>
+          <Property Name="L_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="L_Proto" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_Local_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_Foreign_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_State" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="L_Pid" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="C_ID" Type="Int32" />
+          <NavigationProperty Name="Companys" Relationship="Self.FK__Logss__C_ID__160F4887" FromRole="Logss" ToRole="Companys" />
+        </EntityType>
+        <Association Name="FK__Employees__C_ID__6477ECF3">
+          <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companys">
+              <PropertyRef Name="C_ID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="C_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Logss__C_ID__160F4887">
+          <End Role="Companys" Type="Self.Companys" Multiplicity="0..1" />
+          <End Role="Logss" Type="Self.Logss" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companys">
+              <PropertyRef Name="C_ID" />
+            </Principal>
+            <Dependent Role="Logss">
+              <PropertyRef Name="C_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Logs__E_ID__0B91BA14">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="E_ID" />
+            </Principal>
+            <Dependent Role="Logs">
+              <PropertyRef Name="E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CompanyEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Companys" EntityType="Self.Companys" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" />
+          <EntitySet Name="Logss" EntityType="Self.Logss" />
+          <AssociationSet Name="FK__Employees__C_ID__6477ECF3" Association="Self.FK__Employees__C_ID__6477ECF3">
+            <End Role="Companys" EntitySet="Companys" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Logss__C_ID__160F4887" Association="Self.FK__Logss__C_ID__160F4887">
+            <End Role="Companys" EntitySet="Companys" />
+            <End Role="Logss" EntitySet="Logss" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Logs__E_ID__0B91BA14" Association="Self.FK__Logs__E_ID__0B91BA14">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Logs" EntitySet="Logs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CompanyModelStoreContainer" CdmEntityContainer="CompanyEntities1">
+          <EntitySetMapping Name="Companys">
+            <EntityTypeMapping TypeName="CompanyModel.Companys">
+              <MappingFragment StoreEntitySet="Companys">
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+                <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+                <ScalarProperty Name="C_BusinessArea" ColumnName="C_BusinessArea" />
+                <ScalarProperty Name="C_CompanySize" ColumnName="C_CompanySize" />
+                <ScalarProperty Name="C_Country" ColumnName="C_Country" />
+                <ScalarProperty Name="C_City" ColumnName="C_City" />
+                <ScalarProperty Name="C_OS" ColumnName="C_OS" />
+                <ScalarProperty Name="C_Password" ColumnName="C_Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="CompanyModel.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+                <ScalarProperty Name="E_Name" ColumnName="E_Name" />
+                <ScalarProperty Name="E_Surname" ColumnName="E_Surname" />
+                <ScalarProperty Name="E_Position" ColumnName="E_Position" />
+                <ScalarProperty Name="E_Password" ColumnName="E_Password" />
+                <ScalarProperty Name="E_Email" ColumnName="E_Email" />
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="CompanyModel.Logs">
+              <MappingFragment StoreEntitySet="Logs">
+                <ScalarProperty Name="L_ID" ColumnName="L_ID" />
+                <ScalarProperty Name="L_Proto" ColumnName="L_Proto" />
+                <ScalarProperty Name="L_Local_Address" ColumnName="L_Local_Address" />
+                <ScalarProperty Name="L_Foreign_Address" ColumnName="L_Foreign_Address" />
+                <ScalarProperty Name="L_State" ColumnName="L_State" />
+                <ScalarProperty Name="L_Pid" ColumnName="L_Pid" />
+                <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logss">
+            <EntityTypeMapping TypeName="CompanyModel.Logss">
+              <MappingFragment StoreEntitySet="Logss">
+                <ScalarProperty Name="L_ID" ColumnName="L_ID" />
+                <ScalarProperty Name="L_Proto" ColumnName="L_Proto" />
+                <ScalarProperty Name="L_Local_Address" ColumnName="L_Local_Address" />
+                <ScalarProperty Name="L_Foreign_Address" ColumnName="L_Foreign_Address" />
+                <ScalarProperty Name="L_State" ColumnName="L_State" />
+                <ScalarProperty Name="L_Pid" ColumnName="L_Pid" />
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
